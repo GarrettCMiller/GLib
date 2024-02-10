@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlAddrCompare</title>
+</head>
+<body>
+<h1>nlAddrCompare</h1>
+
+<h4>compares two addresses</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLboolean <strong>nlAddrCompare</strong>(const NLaddress *<em>address1</em>, const NLaddress *<em>address2</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>address1</em><br />
+<br />
+[in]Specifies the first address.<br />
+<br />
+<em>address2</em><br />
+<br />
+[in]Specifies the second address.
+</p>
+
+<h3>Description</h3>
+<p>
+<strong>nlAddrCompare</strong> compares two addresses to see if they are the same. For IP, the two addresses are
+the same if they have the same IP address and port number.
+</p>
+
+<h3>Return values</h3>
+
+<p>
+If the two addresses are the same, <strong>nlAddrCompare</strong> returns NL_TRUE, otherwise it returns NL_FALSE.
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_NULL_POINTER</strong> : One or more of the addresses was passed a NULL pointer.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlGetAddrFromName.html"><strong>nlGetAddrFromName</strong></a>,<br />
+<a href = "nlGetAddrFromName.html"><strong>nlGetAddrFromNameAsync</strong></a>,<br />
+<a href = "nlGetLocalAddr.html"><strong>nlGetLocalAddr</strong></a>,<br />
+<a href = "nlGetRemoteAddr.html"><strong>nlGetRemoteAddr</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

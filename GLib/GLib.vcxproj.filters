@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Data Structures">
+      <UniqueIdentifier>{d99d7a90-7e1b-4682-802c-8c0bd0855ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data Structures\Container">
+      <UniqueIdentifier>{a32a81fd-cf20-403b-9140-79980743e5e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data Structures\Smart Pointer">
+      <UniqueIdentifier>{a54127dd-e95e-46bc-bdd3-480142171ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX">
+      <UniqueIdentifier>{6adbf68a-990d-495a-bfb4-7ed881104434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX\Mesh">
+      <UniqueIdentifier>{4a8f8677-79fb-4e15-8744-bdf2746970e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX\Base Wrappers">
+      <UniqueIdentifier>{08023c0f-5e8b-4932-a8e5-33c2d3b5f25b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX\Misc">
+      <UniqueIdentifier>{dc3bc0fd-21e0-47e9-b16c-4a623fe189a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Networking">
+      <UniqueIdentifier>{90e2d08e-4977-4550-9e7f-4d63be8f277d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Performance">
+      <UniqueIdentifier>{0652f86b-c1d2-4162-9abd-60e9905a16d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{334a0d2e-17f9-46f8-b914-04e19dc22b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\Obj">
+      <UniqueIdentifier>{2e41d747-8358-472c-a3f8-89190a8214fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{3a3bacf4-69af-4b62-9303-9c7c8c39e6cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XML">
+      <UniqueIdentifier>{fb208542-4de5-4791-899f-9e3bea20b9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XML\TinyXML">
+      <UniqueIdentifier>{e59fe273-c6ac-4ba2-9677-2efac37de415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{acdacc59-7886-4395-9521-511b9db2e2f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Camera">
+      <UniqueIdentifier>{271a3f83-51f4-464e-834d-ec639b554432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{d3ffe1af-fdeb-4cdd-b703-95533ed75ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CUDA">
+      <UniqueIdentifier>{44f021b6-d8a5-4664-bf03-61225fe41b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MFC">
+      <UniqueIdentifier>{e7573dda-efe7-4394-8947-15fba9f86f47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Messaging">
+      <UniqueIdentifier>{f95c183e-42b2-4c78-ac14-cfbc79182321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{a1704a63-8619-45dc-becc-e31bb977c83f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FSM">
+      <UniqueIdentifier>{c119b964-79eb-4c99-b261-e7e2b417fb50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\File System">
+      <UniqueIdentifier>{e31c53ee-c8c1-4335-a690-0cb557387361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{67cdc39e-01fb-47a8-b114-e2a3008f17a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Palette.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimMesh.cpp">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DFrame.cpp">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh3D.cpp">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DWrapper.cpp">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectInput.cpp">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectSound.cpp">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DImage.cpp">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSocket.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="DPlay.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="MySocket.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocket.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileLogHandler.cpp">
+      <Filter>Source Files\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileSample.cpp">
+      <Filter>Source Files\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpObj.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathFuncs.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathParsingUnit.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscMath.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Polynomial.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files\Math\Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="UIButton.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIImage.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIObject.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIText.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLTables.cpp">
+      <Filter>Source Files\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\TinyXML\tinystr.cpp">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\TinyXML\tinyxml.cpp">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\TinyXML\tinyxmlerror.cpp">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\inc\TinyXML\tinyxmlparser.cpp">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalFuncs.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="RegEditor.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorGraphics.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraView.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneticAlgorithm.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="GLibMFCApp.cpp">
+      <Filter>Source Files\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsControllerMgr.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsObject.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="DPakFile.cpp">
+      <Filter>Source Files\File System</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSys.cpp">
+      <Filter>Source Files\File System</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="FontMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="LightMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="MemMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLMgr.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\Color.h">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\CritSection.h">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Palette.h">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Thread.h">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\2dDynamicArray.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Dator.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DynamicArray.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Flag.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Functor.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\HashTable.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\LList.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\LListDbl.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Manager.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ObjectFactory.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\PriorityQueue.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Queue.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Singleton.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Stack.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Tree.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Variable.h">
+      <Filter>Source Files\Data Structures\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\IntrusivePtr.h">
+      <Filter>Source Files\Data Structures\Smart Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ScopedPtr.h">
+      <Filter>Source Files\Data Structures\Smart Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\SharedPtr.h">
+      <Filter>Source Files\Data Structures\Smart Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\AnimMesh.h">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\D3DFrame.h">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Mesh3D.h">
+      <Filter>Source Files\DirectX\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\D3DWrapper.h">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DirectInput.h">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DirectSound.h">
+      <Filter>Source Files\DirectX\Base Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\D3DImage.h">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Light.h">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Vertex.h">
+      <Filter>Source Files\DirectX\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ClientSocket.h">
+      <Filter>Source Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DPlay.h">
+      <Filter>Source Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MySocket.h">
+      <Filter>Source Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Packets.h">
+      <Filter>Source Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ServerSocket.h">
+      <Filter>Source Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Logger.h">
+      <Filter>Source Files\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ProfileLogHandler.h">
+      <Filter>Source Files\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ProfilerOutputHandler.h">
+      <Filter>Source Files\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ProfileSample.h">
+      <Filter>Source Files\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Timer.h">
+      <Filter>Source Files\Performance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ExpObj.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MathConstants.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MathFuncs.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MathParsingUnit.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MiscMath.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Polynomial.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Matrix.h">
+      <Filter>Source Files\Math\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Rect.h">
+      <Filter>Source Files\Math\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Vec.h">
+      <Filter>Source Files\Math\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UIButton.h">
+      <Filter>Source Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UIImage.h">
+      <Filter>Source Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UIObject.h">
+      <Filter>Source Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UIText.h">
+      <Filter>Source Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\xmltables.h">
+      <Filter>Source Files\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DataTypes.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Font.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\GameMacros.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\GLib.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\GlobalFuncs.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Globals.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\RegEditor.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Terrain.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\VectorGraphics.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\VS2005Prefix.h">
+      <Filter>Source Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\CameraView.h">
+      <Filter>Source Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\GeneticAlgorithm.h">
+      <Filter>Source Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\CudaComplex.h">
+      <Filter>Source Files\CUDA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\GLibMFCApp.h">
+      <Filter>Source Files\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Interface.h">
+      <Filter>Source Files\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMessaging.h">
+      <Filter>Source Files\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Physics.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\PhysicsControllerMgr.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\PhysicsObject.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\FSMState.h">
+      <Filter>Source Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\StateMachine.h">
+      <Filter>Source Files\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\dpakfile.h">
+      <Filter>Source Files\File System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\FileSys.h">
+      <Filter>Source Files\File System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\EffectMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\FontMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\LightMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MemMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\MeshMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ParticleMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ScriptMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\SoundMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\SpriteMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ThreadMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\XMLMgr.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\inc\TinyXML\tinystr.h">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\inc\TinyXML\tinyxml.h">
+      <Filter>Source Files\XML\TinyXML</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

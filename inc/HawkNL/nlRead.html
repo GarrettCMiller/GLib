@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlRead, nlWrite</title>
+</head>
+<body>
+<h1>nlRead, nlWrite</h1>
+
+<h4>read or write to a socket</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLint <strong>nlRead</strong>(NLsocket <em>socket</em>, NLvoid *<em>buffer</em>, NLint <em>nbytes</em>)
+
+NLint <strong>nlWrite</strong>(NLsocket <em>socket</em>, const NLvoid *<em>buffer</em>, NLint <em>nbytes</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>socket</em><br />
+<br />
+[in]Specifies a socket.<br />
+<br />
+<em>buffer</em><br />
+<br />
+[in]Specifies the buffer with data to read/write.<br />
+<br />
+<em>nbytes</em><br />
+<br />
+[in]Specifies the length of <em>buffer</em>.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlRead</strong> and <strong>nlWrite</strong> read or write <em>buffer</em> to or from <em>socket</em>. An NL_RELIABLE,
+NL_RELIABLE_PACKETS, or NL_MULTICAST socket must be connected with <a href = "nlConnect.html">nlConnect</a>
+before <strong>nlRead</strong> or <strong>nlWrite</strong> will be successfull. If an NL_UNRELIABLE socket is not connected,
+then the address must be set before <strong>nlWrite</strong>, and <strong>nlRead</strong> will fill in the address of the sender
+for each packet read.<br />
+<br />
+<strong>NOTES:</strong> <strong>nlWrite</strong> on an NL_RELIABLE (TCP) stream socket may actually write less than <em>nbytes</em>. In that
+case, you must call <strong>nlWrite</strong> again later to send the unsent bytes.<br />
+<br />
+<strong>nlWrite</strong> on any packet based socket (NL_UNRELIABLE, NL_RELIABLE_PACKETS, NL_BROADCAST, and NL_MULTICAST)
+will return '0' if the network buffers are full. In that case, you must try to resend later.<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+If no error occurs, <strong>nlRead</strong> and <strong>nlWrite</strong> return the number of bytes read or written.<br />
+<br />
+Otherwise, a value of NL_INVALID is returned, and the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a>.<br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_NULL_POINTER</strong> : A NULL pointer was passed to the function.<br />
+<strong>NL_INVALID_SOCKET</strong> : The socket is not valid.<br />
+<strong>NL_BUFFER_SIZE</strong> : The buffer is not large enough to hold the packet.<br />
+<strong>NL_CON_REFUSED</strong> : The pending connection on a non-blocking socket has been refused.<br />
+<strong>NL_CON_PENDING</strong> : The pending connection on a non-blocking socket is still pending.<br />
+<strong>NL_SYSTEM_ERROR</strong> : A system Socket error has ocurred. The system error can be retrieved by calling <a href = "nlGetError.html">nlGetSystemError</a>.<br />
+<strong>NL_MESSAGE_END</strong> : The connection was closed by the remote computer.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlConnect.html"><strong>nlConnect</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

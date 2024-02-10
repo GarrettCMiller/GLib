@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlHint</title>
+</head>
+<body>
+<h1>nlHint</h1>
+
+<h4> set or disable/enable advanced network settings</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLboolean <strong>nlHint</strong>(NLenum <em>name</em>, NLint <em>value</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>name</em><br />
+<br />
+[in]Specifies the setting to change.<br />
+<br />
+<em>value</em><br />
+<br />
+[in]Specifies the value to set.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlHint</strong> change the setting specified by <em>name</em> to the <em>value</em>. It can be one of the following:<br />
+<br />
+<strong>NL_LISTEN_BACKLOG</strong>: Sets the default backlog for the TCP listen. The default varies from platform to platform.<br />
+<br />
+<strong>NL_MULTICAST_TTL</strong>: Sets the TTL to use for multicast. The default is 1.<br />
+<br />
+<strong>NL_REUSE_ADDRESS</strong>: If enabled (NL_TRUE), local addresses will be able to be bound multiple times. This is good for
+servers using TCP, and to allow multiple copies of broadcast and multicast apps to run on the same machine.
+The default is disabled (NL_FALSE).<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+NL_TRUE if no error occurs, otherwise NL_FALSE, and the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a><br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_INVALID_ENUM</strong> : The property name is not valid.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlDisable.html"><strong>nlEnable</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

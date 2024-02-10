@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlGroupCreate, nlGroupDestroy</title>
+</head>
+<body>
+<h1>nlGroupCreate, nlGroupDestroy</h1>
+
+<h4>create or destroy a group</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLint <strong>nlGroupCreate</strong>(void)
+
+NLboolean <strong>nlGroupDestroy</strong>(NLint <em>group</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>group</em><br />
+<br />
+[in]The group to destroy.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlGroupCreate</strong> returns a new group object. Groups can have socket objects added to them,
+and they can be used in place of a socket when calling <a href = "nlRead.html"><strong>nlWrite</strong></a>.<br />
+<br />
+<strong>nlGroupDestroy</strong> destroys a group object.<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+If no error occurs, <strong>nlGroupCreate</strong> returns a new group object, otherwise a value of
+NL_INVALID is returned, and the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a><br />
+<br />
+If no error occurs, <strong>nlGroupDestroy</strong> returns NL_TRUE, otherwise NL_FALSE is returned, and
+the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a><br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_OUT_OF_GROUPS</strong> : No more groups can be created.<br />
+<strong>NL_OUT_OF_MEMORY</strong> : Not enough memory.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlRead.html"><strong>nlWrite</strong></a>,<br />
+<a href = "nlGroupAddSocket.html"><strong>nlGroupAddSocket</strong></a>,<br />
+<a href = "nlGroupAddSocket.html"><strong>nlGroupDeleteSocket</strong></a>,<br />
+<a href = "nlGroupGetSockets.html"><strong>nlGroupGetSockets</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

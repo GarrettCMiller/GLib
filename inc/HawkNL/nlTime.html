@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlTime</title>
+</head>
+<body>
+<h1>nlTime</h1>
+
+<h4>get the current time</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLboolean <strong>nlTime</strong>(NLtime *<em>ts</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>ts</em><br />
+<br />
+[in/out]Pointer to the NLtime structure to update.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlTime</strong> returns the seconds since midnight, January 1, 1970 just like time(). However,
+<em>ts</em> is also updated with the milliseconds and microseconds since the last whole second passed by.
+On most platforms <strong>nlTime</strong> should have a resolution close to one microsecond, but on others
+it may only be accurate to one millisecond. There is no guaranteed accuracy on any platform.<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+NL_TRUE if no error occurs, otherwise NL_FALSE, and the
+specific error code can be retrieved by calling <a href = "nlGetError.html">nlGetError</a><br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_NULL_POINTER</strong> : A NULL pointer was passed to this function.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+none
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em><br />
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

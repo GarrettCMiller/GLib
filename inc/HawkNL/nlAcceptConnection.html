@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>HawkNL Reference Manual - nlAcceptConnection</title>
+</head>
+<body>
+<h1>nlAcceptConnection</h1>
+
+<h4>accept a pending connection</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLsocket <strong>nlAcceptConnection</strong>(NLsocket <em>socket</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>socket</em><br />
+<br />
+[in]Specifies a socket object ready to accept incoming connections.
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlAcceptConnection</strong> returns a new socket object if a new connection is accepted.
+This new socket will only receive packets from the remote address that connected.
+Incoming connections must have already been enabled with a call to <strong>nlListen</strong>.
+</p>
+
+<h3>Return values</h3>
+
+<p>
+If no error occurs, <strong>nlAcceptConnection</strong> returns a socket object for the new connection.<br />
+<br />
+Otherwise, a value of NL_INVALID is returned, and the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a>
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_NOT_LISTEN</strong> : <strong>nlListen</strong> has not been called on this socket.<br />
+<strong>NL_NO_PENDING</strong> : There are no pending connections at this time.<br />
+<strong>NL_WRONG_TYPE</strong> : The function does not support this socket type (NL_BROADCAST or NL_MULTICAST).<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlListen.html"><strong>nlListen</strong></a>,<br />
+<a href = "nlConnect.html"><strong>nlConnect</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

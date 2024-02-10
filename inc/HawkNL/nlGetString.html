@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlGetString</title>
+</head>
+<body>
+<h1>nlGetString</h1>
+
+<h4> get a string NL property</h4> 
+
+<h3>C Specification</h3>
+<pre>
+const NLchar* <strong>nlGetString</strong>(NLenum <em>name</em>)
+
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>name</em><br />
+<br />
+[in]Specifies the name of the property.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlGetString</strong> returns the property specified by <em>name</em>. It can be one of the following:<br />
+<br />
+<strong>NL_VERSION</strong>: The NL version string.<br />
+<br />
+<strong>NL_NETWORK_TYPES</strong>: The network types that were found when <a href = "nlInit.html">nlInit</a>
+was called.<br />
+<br />
+<strong>NL_CONNECTION_TYPES</strong>: The network connection types that are valid for the currently selected
+network type. Only valid after <a href = "nlSelectNetwork.html">nlSelectNetwork</a><br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+<strong>nlGetString</strong> returns a pointer to the string, or NULL if an error occured.
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_INVALID_ENUM</strong> : The property name is not valid.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlInit.html"><strong>nlInit</strong></a>,<br />
+<a href = "nlSelectNetwork.html"><strong>nlSelectNetwork</strong></a>,<br />
+<a href = "nlGetBoolean.html"><strong>nlGetBoolean</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

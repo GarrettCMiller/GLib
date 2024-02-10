@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlGetNameFromAddr, nlGetNameFromAddrAsync</title>
+</head>
+<body>
+<h1>nlGetNameFromAddr, nlGetNameFromAddrAsync</h1>
+
+<h4>resolves a name from an address</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLchar * <strong>nlGetNameFromAddr</strong>(const NLaddress * <em>address</em>, NLchar *<em>name</em>)
+
+NLboolean <strong>nlGetNameFromAddrAsync</strong>(const NLaddress * <em>address</em>, NLchar *<em>name</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>address</em><br />
+<br />
+[in]Specifies a pointer to the address.<br />
+<br />
+<em>name</em><br />
+<br />
+[out]Specifies a pointer to the name string allocated by the caller.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlGetNameFromAddr</strong> and <strong>nlGetNameFromAddrAsync</strong> resolve <em>address</em> to a <em>name</em>.
+<em>name</em> MUST be allocated NL_MAX_STRING_LENGTH bytes. If <em>address</em> cannot be resolved, then
+<a href = "nlAddrToString.html">nlAddrToString</a> will be called to fill in <em>name</em>. When
+<strong>nlGetNameFromAddrAsync</strong> is called, it will intialize <em>name</em> to all '\0'. You can check
+to see if <strong>nlGetNameFromAddrAsync</strong> is done by checking the length of <em>name</em>, or simply
+check to see if <em>name[0]</em> == '\0'.<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+<strong>nlGetNameFromAddr</strong> returns a pointer to <em>name</em> if no error occurs, otherwise it returns
+NULL, and the specific error code can be retrieved by calling <a href = "nlGetError.html">nlGetError</a><br />
+<br />
+<strong>nlGetNameFromAddrAsync</strong> returns NL_TRUE if no error occurs, otherwise it returns NL_FALSE, and the
+specific error code can be retrieved by calling <a href = "nlGetError.html">nlGetError</a><br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_NULL_POINTER</strong> : A NULL pointer was passed to this function.<br />
+<strong>NL_OUT_OF_MEMORY</strong> : Not enough memory.<br />
+<strong>NL_SYSTEM_ERROR</strong> : A system Socket error has ocurred. The system error can be retrieved by
+calling <a href = "nlGetError.html">nlGetSystemError</a>.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlAddrToString.html"><strong>nlAddrToString</strong></a>,<br />
+<a href = "nlAddrToString.html"><strong>nlStringToAddr</strong></a>,<br />
+<a href = "nlGetAddrFromName.html"><strong>nlGetAddrFromName</strong></a>,<br />
+<a href = "nlGetAddrFromName.html"><strong>nlGetAddrFromNameAsync</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+///////////////////////////////////////////////////////////////////////////
+//		File:				FontMgr.cpp
+//
+//		Programmer:			Garrett Miller (GM) (c) 2004
+//
+//		Date created:		N/A
+//
+//		Description:		A manager that creates and stores D3D fonts.
+//////////////////////////////////////////////////////////////////////////
+#include "StdAfx.h"
+#include "Fontmgr.h"
+
+//////////////////////////////////////////////////////////////////////////
+
+IMPLEMENT_SINGLETON(FontMgr);
+
+//////////////////////////////////////////////////////////////////////////
+
+FontMgr::FontMgr(void)
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+FontMgr::~FontMgr(void)
+{
+	m_Fonts.FreePointers();
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+UInt32 FontMgr::LoadFontSet(UInt32 height, Bool bBold, Bool bItalic, String fontname)
+{
+	Font* font = new Font(height, bBold, bItalic, fontname);
+
+	UInt32 index = 0;
+
+	if (Contains(font, &index))
+		return index;
+
+	if (SUCCEEDED(font->Load(height, bBold, bItalic, fontname)))
+	{
+		m_Fonts.Push(font);
+		return m_Fonts.Size() - 1;
+	}
+	else
+        ASSERT(false);
+
+	return 0xffffffff;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+Font& FontMgr::GetByID(UInt32 id)
+{
+	return *m_Fonts[id];
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+Bool FontMgr::Contains(Font* font, UInt32* pIndex /* = NULL */) const
+{
+	return m_Fonts.Contains(font, 0, pIndex);
+}

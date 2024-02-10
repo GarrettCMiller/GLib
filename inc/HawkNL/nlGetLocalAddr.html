@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - nlGetLocalAddr, nlSetLocalAddr</title>
+</head>
+<body>
+<h1>nlGetLocalAddr, nlSetLocalAddr</h1>
+
+<h4>get the local address of a socket, or set the default address for new sockets</h4> 
+
+<h3>C Specification</h3>
+<pre>
+NLboolean <strong>nlGetLocalAddr</strong>(NLsocket <em>socket</em>, NLaddress *<em>address</em>)
+
+NLboolean <strong>nlSetLocalAddr</strong>(const NLaddress *<em>address</em>)
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>socket</em><br />
+<br />
+[in]Specifies a socket.<br />
+<br />
+<em>address</em><br />
+<br />
+[out]Specifies a pointer to the address allocated by the caller.<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+<strong>nlGetLocalAddr</strong> finds the local address for <em>socket</em>. This is usually the default
+NIC IP address. On a multihomed system (more than one NIC on separate networks), if the
+socket is connected, then <em>address</em> will correspond to the IP address of the NIC that
+is connected to the remote address. If <strong>nlGetLocalAddr</strong> was successful <em>address.valid</em>
+will be set to NL_TRUE, otherwise it will be set to NL_FALSE.<br />
+<br />
+<strong>nlSetLocalAddr</strong> sets the default local address. It effects all sockets created AFTER this call.
+</p>
+
+<h3>Return values</h3>
+
+<p>
+NL_TRUE if no error occurs, otherwise NL_FALSE, and the specific error code can be retrieved by calling
+<a href = "nlGetError.html">nlGetError</a><br />
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+<strong>NL_INVALID_SOCKET</strong> : The socket is not valid.<br />
+<strong>NL_NULL_POINTER</strong> : A NULL pointer was passed to this function.<br />
+<strong>NL_SYSTEM_ERROR</strong> : A system Socket error has ocurred. The system error can be retrieved
+by calling <a href = "nlGetError.html">nlGetSystemError</a>.<br />
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlGetAllLocalAddr.html"><strong>nlGetAllLocalAddr</strong></a>,<br />
+<a href = "nlGetRemoteAddr.html"><strong>nlGetRemoteAddr</strong></a>,<br />
+<a href = "nlGetRemoteAddr.html"><strong>nlSetRemoteAddr</strong></a>,<br />
+<a href = "nlAddrToString.html"><strong>nlStringToAddr</strong></a><br />
+<a href = "nlAddrToString.html"><strong>nlAddrToString</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>

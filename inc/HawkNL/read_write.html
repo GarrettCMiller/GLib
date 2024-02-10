@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>HawkNL Reference Manual - read/write packet buffer macros</title>
+</head>
+<body>
+<h1>read/write packet buffer macros</h1>
+
+<h4>read and write to packet buffers</h4>
+
+<h3>C Specification</h3>
+<pre>
+void <strong>writeByte</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte <em>value</em>)
+
+void <strong>writeShort</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLushort <em>value</em>)
+
+void <strong>writeLong</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLulong <em>value</em>)
+
+void <strong>writeFloat</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLfloat <em>value</em>)
+
+void <strong>writeDouble</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLdouble <em>value</em>)
+
+void <strong>writeString</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte *<em>value</em>)
+
+void <strong>writeBlock</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte *<em>value</em>, NLint <em>length</em>)
+
+void <strong>readByte</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte <em>value</em>)
+
+void <strong>readShort</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLushort <em>value</em>)
+
+void <strong>readLong</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLulong <em>value</em>)
+
+void <strong>readFloat</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLfloat <em>value</em>)
+
+void <strong>readDouble</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLdouble <em>value</em>)
+
+void <strong>readString</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte *<em>value</em>)
+
+void <strong>readBlock</strong>(NLbyte *<em>buffer</em>, NLint <em>count</em>, NLbyte *<em>value</em>, NLint <em>length</em>)
+
+</pre>
+
+<h3>Parameters</h3>
+
+<p>
+<em>buffer</em><br />
+<br />
+[out/in]Specifies the packet buffer.<br />
+<br />
+<em>count</em><br />
+<br />
+[out/in]Specifies the counter that points into the packet buffer.<br />
+<br />
+<em>value</em><br />
+<br />
+[out/in]Specifies the value to be written or read.<br />
+<br />
+<em>length</em><br />
+<br />
+[in]Specifies the length of the value (Blocks only).<br />
+</p>
+
+<h3>Description</h3>
+
+<p>
+These macros allow easy access to a packet buffer. They also endian swap the values as needed. These are
+almost all implemented as macros, so care must be taken when passing values to them.<br />
+<br />
+<em>count</em> keeps track of the current read/write location inside of <em>buffer</em>. It MUST be
+initialized to 0 before reading from or writing to the buffer. It is incremented after each read and write
+by the length of the <em>value</em>.<br />
+<br />
+<strong>Note:</strong> If you are compiling on a platform that does not allow non-aligned memory access, define NL_SAFE_COPY
+to safely access memory. This is slower, so only define it if you need it.<br />
+</p>
+
+<h3>Return values</h3>
+
+<p>
+none
+</p>
+
+<h3>Error codes</h3>
+
+<p>
+none
+</p>
+
+<h3>See also</h3>
+
+<p>
+<a href = "nlSwap.html"><strong>nlSwap</strong></a><br />
+</p>
+
+<hr />
+
+<p>
+Back to the <a href = "index.html"><strong>HawkNL index page</strong></a>
+</p>
+
+<hr />
+
+<p>
+Go directly to the <a href = "http://www.hawksoft.com/hawknl/"><strong>main HawkNL page</strong></a> at Hawk Software<br />
+<br />
+&#169; <em>2000-2002 <a href = "mailto:phil@hawksoft.com">Phil Frisbie</a>.</em>
+</p>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+</body>
+</html>
